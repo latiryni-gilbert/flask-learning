@@ -4,6 +4,7 @@ from flask import Flask
 from flask import request
 from markupsafe import escape
 from flask import url_for
+from flask import request
 
 app = Flask(__name__)
 
@@ -20,6 +21,22 @@ def index():
 @app.route('/login')
 def login():
     return 'login'
+
+# POST AND GET (HTTP Methods)
+#@app.route('/login', methods=['GET', 'POST'])
+#def_login():
+    # if request.method == 'POST':
+        # return do_the_login()
+    # else:
+        # return show_the_login_form()
+
+#@app.route('/login')
+#def login_get():
+    #return show_the_login_form()
+
+#@app.post('/login')
+#def login_post():
+    #return do_the_login()
 
 #Variable Rules
 @app.route('/user/<username>')
