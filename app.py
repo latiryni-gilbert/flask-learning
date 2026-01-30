@@ -4,6 +4,10 @@ from markupsafe import escape
 
 app = Flask(__name__)
 
+@app.route('/index')
+def index():
+    return 'Index Page'
+
 @app.route("/")
 def hello():
     name = request.args.get("name", "Flask")
